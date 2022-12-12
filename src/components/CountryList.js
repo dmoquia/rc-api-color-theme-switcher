@@ -1,9 +1,9 @@
 import React from "react";
 import Country from "./Country";
+import Loader from "./Loader";
 function CountryList({ loading, countries }) {
-  console.log(countries?.length);
   if (loading) {
-    return <h1>loading...</h1>;
+    return <Loader />;
   }
 
   if (countries?.length < 1 && loading) {

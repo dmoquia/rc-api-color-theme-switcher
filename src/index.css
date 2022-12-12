@@ -36,6 +36,7 @@ nav {
   align-items: center;
   align-content: center;
 }
+
 .card {
   margin: 0.5rem;
 }
@@ -159,6 +160,8 @@ nav {
   padding: 0.5rem;
   background: var(--White);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 100px;
+  text-align: center;
 }
 /* search form */
 .form {
@@ -251,14 +254,16 @@ body {
 #light .country-info,
 .border p {
   color: var(--DarkBlue);
+  padding-top: 1.5rem;
 }
 
 #light .border ul li {
-  background: var(--VeryLightGray);
-  border: 1px solid var(--VeryLightGray);
+  background: var(--White);
+  border: 1px solid var(--White);
   box-shadow: none;
-  margin: 0 0.2rem;
+  margin: 1rem;
   color: var(--DarkBlue);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
 #light .switch > i {
@@ -292,7 +297,8 @@ section {
   background: var(--DarkBlue);
   border: 1px solid var(--DarkBlue);
   box-shadow: none;
-  margin: 0 0.2rem;
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
 #dark .switch > i {
@@ -314,4 +320,19 @@ switch {
   top: 50%;
   transform: translateY(-50%);
   margin-left: -2rem;
+}
+
+/* loader */
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20rem;
+  height: 20rem;
+  /* border: 1rem solid teal;
+  border-radius: 50%; */
 }

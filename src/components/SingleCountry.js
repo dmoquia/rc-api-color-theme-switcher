@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { flatNative, flatCurr, addComma, formatNum } from "../utils/helper";
+import Loader from "./Loader";
 const SingleCountry = () => {
   const { name } = useParams();
 
@@ -77,7 +78,7 @@ const SingleCountry = () => {
   }, [name]);
 
   if (loading) {
-    return <h1>loading...</h1>;
+    return <Loader />;
   }
   if (!country) {
     return <h2>No country to display</h2>;
@@ -134,12 +135,15 @@ const SingleCountry = () => {
                 </li>
               </ul>
             </div>
-            <div className="border">
+            <div className="border ">
               <p>Border Countries: </p>
               <ul className="truncate">
                 {border
                   ? border.map((list) => (
-                      <li key={list.cca3}> {list.name.common}</li>
+                      <li className="truncate" key={list.cca3}>
+                        {" "}
+                        {list.name.common}
+                      </li>
                     ))
                   : "No border"}
               </ul>
