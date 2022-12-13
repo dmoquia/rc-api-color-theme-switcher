@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { formatNum } from "../utils/helper";
 function Country({ png, common, population, region, capital }) {
   return (
     <div className="row">
@@ -14,9 +14,9 @@ function Country({ png, common, population, region, capital }) {
           </div>
           <div className="card-content text-hide-me ">
             <p className="country-name truncate">{common}</p>
-            <p>Population: {population}</p>
+            <p>Population: {formatNum(population)}</p>
             <p>Region: {region}</p>
-            <p>Capital: {capital}</p>
+            <p>Capital: {capital ? capital : "No Result"}</p>
           </div>
         </div>
       </div>

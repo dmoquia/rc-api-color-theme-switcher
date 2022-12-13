@@ -135,7 +135,7 @@ const SingleCountry = () => {
               </ul>
             </div>
             <div className="border ">
-              <p>Border Countries: </p>
+              <p>Border Countries: {!border && "No border"}</p>
               <ul className="">
                 {border
                   ? border.map((list) => (
@@ -146,7 +146,7 @@ const SingleCountry = () => {
                         </Link>
                       </li>
                     ))
-                  : "No border"}
+                  : null}
               </ul>
             </div>
           </div>

@@ -145,6 +145,9 @@ nav {
   font-weight: 700;
   padding: 0.3rem 0;
 }
+.border p {
+  display: inline-block;
+}
 .text-field ul span {
   font-size: 1rem;
   font-weight: 300;
@@ -290,6 +293,14 @@ section {
   background: var(--DarkBlue);
 }
 
+#dark .card {
+  background: var(--DarkBlue);
+}
+
+#dark .card p {
+  color: var(--White);
+}
+
 #dark .border p {
   color: var(--White);
 }
@@ -333,6 +344,4 @@ switch {
   margin: auto;
   width: 20rem;
   height: 20rem;
-  /* border: 1rem solid teal;
-  border-radius: 50%; */
 }
