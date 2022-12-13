@@ -7,7 +7,7 @@ const Home = () => {
   const { countries, searchTerm, loading, setSearchTerm } = useContext(Context);
 
   return (
-    <main style={{ backgroung: `${loading ? "" : "white"}` }}>
+    <main>
       <SearchForm searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <CountryList loading={loading} countries={countries} />
     </main>

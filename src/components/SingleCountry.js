@@ -73,7 +73,6 @@ const SingleCountry = () => {
       } catch (error) {
         console.log(error);
       }
-      // setLoading(false);
     })();
   }, [name]);
 
@@ -137,12 +136,14 @@ const SingleCountry = () => {
             </div>
             <div className="border ">
               <p>Border Countries: </p>
-              <ul className="truncate">
+              <ul className="">
                 {border
                   ? border.map((list) => (
                       <li className="truncate" key={list.cca3}>
-                        {" "}
-                        {list.name.common}
+                        <Link to={`/country/${list.name.common}`}>
+                          {" "}
+                          {list.name.common}
+                        </Link>
                       </li>
                     ))
                   : "No border"}
